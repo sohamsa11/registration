@@ -1,0 +1,16 @@
+<!-- update-user.component.html -->
+
+<form (ngSubmit)="onSubmit()" #updateForm="ngForm">
+    <div>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" [(ngModel)]="userData.name" required>
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" [(ngModel)]="userData.email" required>
+    </div>
+    <button type="submit">Update</button>
+  </form>
+  
+  <button (click)="deleteUser(userData.id)">Delete User</button>
+  
